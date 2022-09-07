@@ -1,5 +1,3 @@
-// numword-test.cpp by Bill Weinman <http://bw.org/>
-// updated 2018-10-04
 #include <cstdio>
 #include "numword.h"
 using namespace std;

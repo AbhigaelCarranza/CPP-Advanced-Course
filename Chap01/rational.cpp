@@ -1,5 +1,3 @@
-// rational.cpp by Bill Weinman <http://bw.org/>
-// updated 2018-10-03 for CppAdv
 #include <cstdio>
 #include <iostream>
 using namespace std;

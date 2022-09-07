@@ -1,5 +1,3 @@
-// numword.h by Bill Weinman <http://bw.org/>
-// version as of 2018-10-05
 #ifndef _NUMWORD_H
 #define _NUMWORD_H
 

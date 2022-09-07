@@ -1,5 +1,3 @@
-// numword.cpp by Bill Weinman <http://bw.org/>
-// version as of 2018-10-05
 #include "numword.h"
 using namespace bw;
 

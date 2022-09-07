@@ -1,30 +1,38 @@
-// namespace.cpp by Bill Weinman <http://bw.org/>
-// updated 2018-11-09
-#include <cstdio>
+#include <iostream>
 #include <string>
+
+using namespace std;
 
 namespace bw {
     
-    const std::string prefix = "(bw::string) ";
+    const string prefix1 = "(bw::string) ";
     
-    class string {
-        std::string _s = "";
-        string ();
+    class string1 {
+        string _s = "";
+        string1 ();
     public:
-        string ( const std::string & s ) : _s( prefix + s) {}
+        string1 ( const string & s ) : _s( prefix1 + s) {}
+        string get_S() {return _s;};
+        friend ostream& operator <<(ostream& other,string1& dt); 
         const char * c_str() const { return _s.c_str(); }
-        operator std::string & () { return _s; }
+        operator string & () { return _s; }
         operator const char * () const { return _s.c_str(); }
     };
     
-};  // namespace bwstring
+};
 
 int main() {
-    const std::string s1("This is a string");
-    std::puts(s1.c_str());
+    const string s1("This is a string ");
+    cout<<s1<<endl;
     
-    const bw::string s2(s1);
-    std::puts(s2);
+    const bw::string1 s2(s1);
+    cout<<s2<<endl;
     
     return 0;
+}
+
+ostream& operator <<(ostream& COUT,bw::string1& dt)
+{
+    COUT<<"La impresion es la siguiente: \n"<<dt.get_S()<<endl;
+    return COUT;
 }
