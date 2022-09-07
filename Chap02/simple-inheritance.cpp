@@ -1,5 +1,3 @@
-// simple-inheritance.cpp by Bill Weinman <http://bw.org/>
-// 2018-10-08
 #include <iostream>
 #include <string>
 using namespace std;
