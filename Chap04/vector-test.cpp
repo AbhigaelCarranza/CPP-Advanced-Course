@@ -1,6 +1,6 @@
 // vector-test.cpp by Bill Weinman <http://bw.org/>
 // version of 2018-11-11
-#include <cstdio>
+#include <iostream>
 #include <vector>
 #include <string>
 #include <utility>
@@ -15,8 +15,8 @@ void disp_t(vector<string> & v) {
     if(v.empty()) {
         puts("[empty]");
     } else {
-        for( string s : v ) printf("%s ", s.c_str());
-        puts("");
+        for( string s : v ) cout<<" - "<< s.c_str();
+        puts(" ");
     }
     fflush(stdout);
 }
@@ -36,5 +36,13 @@ int main() {
     disp_t(v1);
     disp_t(v2);
     
+    v2=std::move(v1);
+
+    cout << endl<< "Prueba V1 :" ;
+    disp_t(v1);
+    cout << endl<< "Prueba V2 :" ;
+    disp_t(v2);
+    cout << endl;
+
     return 0;
 }
